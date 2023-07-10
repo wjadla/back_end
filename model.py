@@ -20,6 +20,12 @@ class Notification(BaseModel):
     id: str = None
     title:str 
     description : str
+
+
+class Rule(BaseModel):
+    id:str = None
+    role_name= str
+        
     
 
 class Response(BaseModel):
