@@ -18,10 +18,12 @@ async def create(utilisateur: Utilisateur):
 
 
 
+
+
 @router.get("/utilisateur/{id}")
 async def get_id(id:str):
      _utilisateur = await UtilisateurRepo.retrieve_id(id)
-     return Response(code =200, status ="OK", message="success retrieve user").dict(exclude_none=True)
+     return Response(code =200, status ="OK", message="success retrieve user", result=_utilisateur).dict(exclude_none=True)
 
 
 @router.post("utilisateur/update")

@@ -10,10 +10,16 @@ class Utilisateur(BaseModel):
     photo : str
     number : int
 
-class Book(BaseModel):
+class Person(BaseModel):
     id:str = None
-    title : str
-    description: str
+    name : str
+    job: str
+
+
+class Notification(BaseModel):
+    id: str = None
+    title:str 
+    description : str
     
 
 class Response(BaseModel):
